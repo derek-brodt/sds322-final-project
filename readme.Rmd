@@ -30,8 +30,18 @@ head(clean_train)
 clean_train %>% 
   ggplot(aes(x=SalePrice)) +
   geom_histogram()
-
+head(clean_train)
 ```
+```{R}
+# install.packages("corrplot")
+# library(corrplot)
+# clean_train_numeric_only <- select_if(clean_train, is.numeric)
+# res <- cor(clean_train_numeric_only)
+# corrplot(res, type = "upper", order = "hclust", 
+#          tl.col = "black", tl.srt = 45)
+```
+
+
 
 
 ```{R, echo=F}
