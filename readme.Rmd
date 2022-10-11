@@ -1,0 +1,39 @@
+---
+title: "SDS322 Final Project"
+author: "SDS322E"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+---
+
+```{r global_options, include=FALSE}
+#DO NOT EDIT THIS CHUNK OR ANYTHING ABOVE IT!
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = F, message = F, tidy=T, tidy.opts=list(width.cutoff=50))
+```
+
+
+```{R}
+library(dplyr)
+library(ggplot2)
+library(readr)
+clean_train <- read_csv("~/SDS322E/sds322-final-project/clean_train.csv")
+head(clean_train)
+
+```
+
+```{R}
+
+clean_train %>% 
+  ggplot(aes(x=SalesPrice)) +
+  geom_histogram()
+
+```
+
+
+```{R, echo=F}
+## DO NOT DELETE OR MODIFY THIS CHUNK: IT MUST BE PRESENT TO RECEIVE CREDIT FOR THE ASSIGNMENT
+sessionInfo(); Sys.time(); Sys.info()
+```
