@@ -26,8 +26,9 @@ head(clean_train)
 
 ```{R}
 
+
 clean_train %>% 
-  ggplot(aes(x=SalesPrice)) +
+  ggplot(aes(x=SalePrice)) +
   geom_histogram()
 
 ```
